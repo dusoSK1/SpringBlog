@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout.html :: head}"></head>
+<body>
+
+</body>
+<header th:replace="~{fragments/layout.html :: header}"></header>
+
+<article>
+  <header>
+    <h1>Skills</h1>
+  </header>
+
+  <div id="centered">
+    <section>
+      <table id="skills">
+        <tr class="centered">
+          <td>
+            <img th:src="@{/images/html.png}" alt="HTML"/>
+          </td>
+          <td>
+            <img th:src="@{/images/js.png}" alt="JavaScript"/>
+          </td>
+          <td>
+            <img th:src="@{/images/java.png}" alt="Java"/>
+          </td>
+          <td>
+            <img th:src="@{/images/spring-ico.png}" alt="Spring"/>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <h2>HTML</h2>
+            <p>With my expertise in HTML, I can structure web content effectively, ensuring it is semantic, accessible, and optimized for search engines.</p>
+          </td>
+          <td>
+            <h2>JavaScript</h2>
+            <p>Thanks to my proficiency in JavaScript, I can create dynamic, interactive front-end interfaces.</p>
+          </td>
+          <td>
+            <h2>Java</h2>
+            <p>I learn Java from tutorials on ICTdemy.com, enabling me to develop interactive web applications and efficient backend services.</p>
+          </td>
+          <td>
+            <h2>Spring Boot</h2>
+            <p>I built upon my Java skills with Spring Boot, enabling me to efficiently create RESTful APIs, manage data persistence, and implement security features.</p>
+          </td>
+        </tr>
+      </table>
+    </section>
+  </div>
+</article>
+
+<footer th:replace="~{fragments/layout.html :: footer}"></footer>
+</html>

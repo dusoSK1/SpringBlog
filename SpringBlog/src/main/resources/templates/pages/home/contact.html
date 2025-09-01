@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout.html :: head}"></head>
+
+<body>
+<header th:replace="~{fragments/layout.html :: header}"></header>
+
+<article>
+    <div id="centered">
+        <header>
+            <h1>Contact</h1>
+        </header>
+        <section>
+            <p>
+                <img th:src="@{/images/email.png}" alt="email" class="left"/>
+                If you want to tell me something, send me an email at <strong>sabi
+                (at sign) sabi (dot) com or use the form below.</strong>.
+            </p>
+
+            <p class="centered">
+                <iframe frameborder="0" scrolling="no" width="500px" height="220px"
+                        src="https://www.ictdemy.com/api/Service-MailForm/665da505088b17.04554199">
+                </iframe>
+            </p>
+        </section>
+    </div>
+</article>
+
+<footer th:replace="~{fragments/layout.html :: footer}"></footer>
+</body>
+</html>

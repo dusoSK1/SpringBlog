@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:replace="~{fragments/layout.html :: head}"></head>
+<body>
+<header th:replace="~{fragments/layout.html :: header}"></header>
+<article>
+    <div id="centered" class="article">
+        <header>
+            <h1>About Me</h1>
+        </header>
+
+        <img th:src="@{/images/avatar.jpg}" class="avatar" alt="Programmer SaBi"/>
+
+        <section>
+            <p>Welcome! I'm thrilled to help you transform your ideas into stunning, <strong>high-performing
+                websites</strong>.</p>
+
+            <p>I'm Dušan Stanko, a web developer with a passion for creating dynamic and responsive websites. I have
+                expertise in various technologies, including HTML, CSS, JavaScript, and Java with Spring Boot.</p>
+
+            <p>When I'm not coding, I love reading tech blogs, experimenting with new frameworks, and engaging in
+                outdoor
+                activities.</p>
+
+
+            <p class="paragraph-button">
+                <a th:href="@{/references}" class="references-button">My References</a>
+            </p>
+
+            <div class="cleaner"></div>
+        </section>
+    </div>
+</article>
+<footer th:replace="~{fragments/layout.html :: footer}"> </footer>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head th:framgent="head">
+    <meta charset="utf-8"/>
+    <meta name="description" content="Personal portfolio of programmer SaBi."/>
+    <meta name="keywords" content="portfolio, programmer, SaBi"/>
+    <meta name="author" content="SaBi"/>
+    <title>Web config</title>
+
+    <!-- Links to the necessary styles, icons and scripts -->
+    <link rel="stylesheet" th:href="@{/styles/lightbox.min.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/styles/bootstrap.min.css}" type="text/css"/>
+    <link rel="stylesheet" th:href="@{/styles/styles.css}" type="text/css"/>
+    <link rel="shortcut icon" th:href="@{/images/icon.ico}"/>
+
+    <script th:src="@{/scripts/lightbox-plus-jquery.min.js}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tinymce/6.0.3/tinymce.min.js"></script>
+    <script>
+        tinymce.init({
+           selector: "textarea[id*=content]",
+            entities: "160,nbsp",
+            entity_encoding: "named",
+            entity_encoding: "raw"
+
+        });
+    </script>
+</head>
+<body>
+<header th:fragment="header">
+    <div id="logo">
+        <h1>Sam<span>Bittner</span></h1>
+        <small>webdeveloper</small>
+    </div>
+    <nav>
+        <ul>
+            <li><a th:href="@{/}">Home</a></li>
+            <li><a th:href="@{/articles}">Articles</a></li>
+            <li><a th:href="@{skills}">Skills</a></li>
+            <li><a th:href="@{/references}">Reference</a></li>
+            <li><a class="contact-button" th:href="@{contact}">Contact</a></li>
+            <li sec:authorize="isAnonymous()"><a th:href="@{/account/login}">Log in</a></li>
+            <li sec:authorize="isAnonymous()"><a th:href="@{/account/register}">Register</a></li>
+            <li>
+                <form method="post" th:action="@{/account/logout}">
+                    <button class="btn text-white" sec:authorize="isAuthenticated()">Log out</button>
+                </form>
+            </li>
+        </ul>
+    </nav>
+</header>
+
+<footer th:fragment="footer">
+    Created by &copy;Dusan Stanko 2025 <a href="https://www.itnetwork.sk/">ITnetwork.sk</a>
+
+</footer>
+
+</body>
+</html>
