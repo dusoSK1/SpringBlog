@@ -18,8 +18,6 @@ CREATE TABLE article_entity (
   title VARCHAR(255) NOT NULL
 );
 
-INSERT INTO article_entity (article_id, content, description, title) VALUES
-(9, '<p>teasft</p>', 'teast', 'Test');
 
 -- -----------------------------
 -- Table structure for config_options
