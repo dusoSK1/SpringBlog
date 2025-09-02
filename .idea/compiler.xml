@@ -10,8 +10,11 @@
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct-processor/1.5.3.Final/mapstruct-processor-1.5.3.Final.jar" />
           <entry name="$MAVEN_REPOSITORY$/org/mapstruct/mapstruct/1.5.3.Final/mapstruct-1.5.3.Final.jar" />
         </processorPath>
-        <module name="SpringBlog" />
+        <module name="SpringBlog (1)" />
       </profile>
     </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="SpringBlog" target="16" />
+    </bytecodeTargetLevel>
   </component>
 </project>
